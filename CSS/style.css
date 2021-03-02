@@ -1,0 +1,12 @@
+form{
+    font-size: medium;
+    font-family: sans-serif;
+}
+label{
+    width: 60px;
+}
+
+form input{
+    width: 800px;
+    margin: 20px;
+}
