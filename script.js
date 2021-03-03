@@ -63,8 +63,8 @@ $("#contactform").submit(function(event){
 
     $('.new-address').each(function(){
       var inputtedStreet =$(this).find('input#Street').val();
-      var InputtedCity =$(this).find('input#City').val();
-      var InputtedCounty = $(this).find('input#county').val();
+      var inputtedCity =$(this).find('input#City').val();
+      var inputtedCounty = $(this).find('input#county').val();
       var newAddress = new Address (inputtedStreet, inputtedCity, inputtedCounty);
       newContact.addresses.push(newAddress);
 
@@ -78,12 +78,12 @@ $("#contactform").submit(function(event){
     $("#show-contact h2").text(newContact.firstName);
     $(".first-name").text(newContact.firstName);
     $(".last-name").text(newContact.lastName);
-    //$("ul#addresses").text(" ");
-    //newContact.addresses.forEach(function(address){
+    $("ul#addresses").text(" ");
+      newContact.addresses.forEach(function(address){
       //$('ul#addresses').append("<li>" + address.fullAddress + "</li>")
 
       // this line of code below is replaced by the one above since we have created a prototype which defines our fullAddress to incorporate all the details of street, city and county 
-      //$('ul#addresses').append("<li>" + address.street + " ," + address.city + " , " + address.county + "</li>"); 
+    $('ul#addresses').append("<li>" + address.street + " ," + address.city + " , " + address.county + "</li>"); 
 
     });
  
@@ -102,10 +102,11 @@ $("#contactform").submit(function(event){
 
 
 
-/*
-$(".contact").last().click(function() {
-  $("#show-contact").show();
-  $("#show-contact h2").text(newContact.firstName);
-  $(".first-name").text(newContact.firstName);
-  $(".last-name").text(newContact.lastName);
-});  */
+
+//$(".contact").last().click(function() {
+ // $("#show-contact").show();
+ // $("#show-contact h2").text(newContact.firstName);
+  //$(".first-name").text(newContact.firstName);
+ // $(".last-name").text(newContact.lastName);
+
+})
