@@ -1,15 +1,19 @@
-form{
-    font-size: medium;
-    font-family: sans-serif;
-}
-label{
-    width: 60px;
+#contactform{
+    width: 250px;
 }
 
-form input{
-    width: 800px;
-    margin: 20px;
+#contactform input{
+    margin:10px;
 }
-h3{
-    margin: 15px;
-}
+#show-contact {
+    display: none;
+  }
+  
+  .contact {
+    cursor: pointer;
+    color: #b400ccea;
+  }
+  
+  .contact:hover {
+    text-decoration: underline;
+  }  
