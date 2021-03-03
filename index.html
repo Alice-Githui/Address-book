@@ -70,19 +70,25 @@
                     <label for ="Last">Last Name:</label>
                     <input type="text" id="Last" placeholder=" ">
                 </div>
-                <div class="street">
-                    <label for ="Street">Street:</label>
-                    <input type="text" id="Street" placeholder=" ">
+                <div id ="new-addresses">
+                  <div class ="new-address">
+                    <div class="street">
+                      <label for ="Street">Street:</label>
+                      <input type="text" id="Street" placeholder=" ">
+                    </div>
+                    <div class="city">
+                      <label for="City">City:</label>
+                      <input type="text" id="City" placeholder=" ">
+                    </div>
+                    <div class="county">
+                      <label for ="county">County:</label>
+                      <input type="text" id="county" placeholder=" ">
+                    </div>
+                  </div>
+
                 </div>
-                <div class="city">
-                    <label for="City">City:</label>
-                    <input type="text" id="City" placeholder=" ">
-                </div>
-                <div class="county">
-                    <label for ="county">County:</label>
-                    <input type="text" id="county" placeholder=" ">
-                </div>
-                <button type="submit" class ="btn">Another Address</button>
+                
+                <span class ="btn btn-success" id="add-address">Another Address</span>
                 <button type="submit" class ="btn">Add</button>
                 
             </form>
@@ -101,7 +107,10 @@
       
           <p>First name: <span class="first-name"></span></p>
           <p>Last name: <span class="last-name"></span></p>
-         <!-- <p>Addresses:<span class="addresses"></span></p> -->
+          <p>Addresses:</p>
+          <ul id="addresses">
+
+          </ul>
         </div>
 
       </div>
