@@ -3,11 +3,22 @@
 function Contact (firstName, lastName){
     this.firstName = firstName;
     this.lastName = lastName;
+    this.addresses =[]; //creates an empty array of address associated with the object Contact so each new address created is pushed to this address
+}
+
+function Adrress (street, city, county){
+  this.street = street;
+  this.city = city;
+  this.county = county;
 }
 Contact.prototype.fullName = function(){ return this.firstName + " " + this.lastName};
 
 let Anna = new Contact ("Anna", "McHughes")
-console.log(Anna.firstName)
+console.log(Anna) 
+
+let Hamisa = new Contact("Hamisa" , "Mobetto")
+console.log(Hamisa)
+
 /*
 console.log(Anna.firstName)
 console.log(Anna.lastName); */
@@ -24,17 +35,25 @@ $("#contactform").submit(function(event){
 
     let newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class ='contact'>" + newContact.fullName()  + "</span></li>");
+    $("ul#contacts").append("<li><span class = 'contact'>" + newContact.fullName()  + "</span></li>");
 
     //these are also defined where we define the variable inputtedFirstName and inputtedLastName
-   // $("input#First").val(" ");
-    //$("input#Last").val(" ")
+   //$("input#First").val(" ");
+   //$("input#Last").val(" ")
+
+   $(".contact").last().click(function(){
+    $("#show-contact").show();
+    $("#show-contact h2").text(newContact.firstName);
+    $(".first-name").text(newContact.firstName);
+    $(".last-name").text(newContact.lastName);
+   // $(".addresses").text()
+  });
 }); 
 
 //If we didn't add last() to $(".contact"), each time a new contact was added, every element with the Contact class would show the information of the most recently added contact on click. By adding last(), we only bind the event to most recently-inserted contact.
 
 
-$(".contact").last().click(function(){
+/*$(".contact").last().click(function(){
   $("#show-contact").show();
   $("#show-contact h2").text(newContact.firstName);
   $(".first-name").text(newContact.firstName);
